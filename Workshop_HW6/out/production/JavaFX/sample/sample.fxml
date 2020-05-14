@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane fx:id="customerPane" disable="true" prefHeight="245.0" prefWidth="406.0" style="-fx-background-color: #E8E8E8;">
+         <children>
+            <MenuButton fx:id="menubutton" layoutX="259.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" text="افزودن محصول">
+              <items>
+                <MenuItem fx:id="menuitem0" mnemonicParsing="false" onAction="#menuSelection" text="سیب" />
+                <MenuItem fx:id="menuitem1" mnemonicParsing="false" onAction="#menuSelection" text="موز" />
+                  <MenuItem fx:id="menuitem2" mnemonicParsing="false" onAction="#menuSelection" text="پرتقال" />
+                  <MenuItem fx:id="menuitem3" mnemonicParsing="false" onAction="#menuSelection" text="انار" />
+                  <MenuItem fx:id="menuitem4" mnemonicParsing="false" onAction="#menuSelection" text="طالبی" />
+                  <MenuItem fx:id="menuitem5" mnemonicParsing="false" onAction="#menuSelection" text="هندوانه" />
+              </items>
+            </MenuButton>
+            <Pane fx:id="productPane" disable="true" layoutX="6.0" layoutY="14.0" prefHeight="183.0" prefWidth="246.0" style="-fx-background-color: #DDDDDD;">
+               <children>
+                  <Label layoutX="197.0" layoutY="36.0" text="قیمت :" />
+                  <TextField fx:id="productpriceField" alignment="CENTER" editable="false" layoutX="3.0" layoutY="36.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #F3F3F3;" />
+                  <Label layoutX="184.0" layoutY="66.0" text="موجودی :" />
+                  <TextField fx:id="productstockField" alignment="CENTER" editable="false" layoutX="3.0" layoutY="66.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #F3F3F3;" />
+                  <Slider fx:id="productSlider" blockIncrement="1.0" disable="true" layoutX="3.0" layoutY="104.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" onMouseReleased="#sliderChanged" prefHeight="24.0" prefWidth="186.0" showTickMarks="true" snapToTicks="true" value="1.0" />
+                  <Label layoutX="198.0" layoutY="100.0" text="تعداد :" />
+                  <Label layoutX="7.0" layoutY="122.0" text="1" />
+                  <Label layoutX="178.0" layoutY="122.0" text="10" />
+                  <Button fx:id="buttonaddtocart" layoutX="3.0" layoutY="144.0" mnemonicParsing="false" onAction="#addToCard" text="افزودن به سبد خرید" />
+                  <Label layoutX="168.0" layoutY="6.0" text="نام محصول :" />
+                  <TextField fx:id="productnameField" alignment="CENTER" editable="false" layoutX="3.0" layoutY="6.0" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #F3F3F3;" />
+                  <Label layoutX="181.0" layoutY="148.0" text="قیمت کل :" />
+                  <TextField fx:id="totalpriceField" alignment="CENTER" editable="false" layoutX="122.0" layoutY="144.0" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #F3F3F3;" />
+               </children>
+            </Pane>
+            <Button fx:id="buttontoggle" layoutX="258.0" layoutY="55.0" mnemonicParsing="false" onAction="#toggleButton" prefHeight="25.0" prefWidth="140.0" text="مشاهده سبد خرید (0)" />
+            <Button fx:id="buttonsubmit" layoutX="9.0" layoutY="210.0" mnemonicParsing="false" onAction="#addCustomer" text="ثبت متقاضی" />
+            <TextField fx:id="customernamefield" layoutX="106.0" layoutY="210.0" onAction="#addCustomer" prefHeight="25.0" prefWidth="212.0" />
+            <Label layoutX="329.0" layoutY="214.0" text="نام متقاضی :" />
+         </children>
+      </Pane>
+      <Button fx:id="buttonnewcustomer" layoutX="421.0" layoutY="14.0" mnemonicParsing="false" onAction="#newCustomer" prefHeight="25.0" prefWidth="111.0" text="متقاضی جدید" />
+      <Button fx:id="buttonHistory" layoutX="421.0" layoutY="56.0" mnemonicParsing="false" onAction="#historyButton" prefHeight="25.0" prefWidth="111.0" text="بایگانی" />
+      <Pane fx:id="cartPane" layoutX="6.0" layoutY="14.0" prefHeight="183.0" prefWidth="246.0" style="-fx-background-color: #DDDDDD;" visible="false">
+         <children>
+            <TableView fx:id="carttableView" prefHeight="183.0" prefWidth="246.0">
+              <columns>
+                <TableColumn fx:id="cartnamecolumn" prefWidth="76.0" text="محصول" />
+                <TableColumn fx:id="cartpricecolumn" prefWidth="57.0" text="قیمت" />
+                  <TableColumn fx:id="cartcountcolumn" prefWidth="37.0" text="تعداد" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="historyPane" prefHeight="245.0" prefWidth="406.0" style="-fx-background-color: #E8E8E8;" visible="false">
+         <children>
+            <TableView fx:id="historytable" prefHeight="245.0" prefWidth="406.0">
+              <columns>
+                <TableColumn fx:id="historycolumnname" prefWidth="121.0" text="نام متقاضی" />
+              </columns>
+            </TableView>
+            <TableView fx:id="hcarttableView" layoutX="80.0" layoutY="14.0" prefHeight="183.0" prefWidth="246.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="hcartnamecolumn" prefWidth="76.0" text="محصول" />
+                  <TableColumn fx:id="hcartpricecolumn" prefWidth="57.0" text="قیمت" />
+                  <TableColumn fx:id="hcartcountcolumn" prefWidth="46.0" text="تعداد" />
+               </columns>
+            </TableView>
+            <Button fx:id="hcartback" layoutX="176.0" layoutY="206.0" mnemonicParsing="false" onAction="#hcartbackbutton" text="بازگشت" visible="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
