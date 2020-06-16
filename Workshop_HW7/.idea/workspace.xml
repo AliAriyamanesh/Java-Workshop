@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11093ad5-cd8f-4571-9450-7690e2daa56c" name="Default Changelist" comment="" />
+    <list default="true" id="11093ad5-cd8f-4571-9450-7690e2daa56c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Workshop_HW6/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Workshop_HW6/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Workshop_HW6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Workshop_HW6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +50,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="F:\Work\workshop\Workshop_HW7\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1coOYGJAS3QZrDeYozZ8sBEoYMb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -52,9 +69,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="oracle" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="F:/Work/DBlib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -114,6 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591191524291</updated>
       <workItem from="1591191527987" duration="11057000" />
+      <workItem from="1591642018223" duration="721000" />
     </task>
     <servers />
   </component>
