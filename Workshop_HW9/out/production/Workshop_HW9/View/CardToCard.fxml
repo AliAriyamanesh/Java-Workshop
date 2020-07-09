@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="133.0" prefWidth="577.0" style="-fx-background-color: e8e8e8;">
+         <children>
+            <Label layoutX="470.0" layoutY="14.0" text="ثبت کارت به کارت :" />
+            <Label layoutX="521.0" layoutY="45.0" text="از کارت :" />
+            <TextField fx:id="addfieldfrom" alignment="CENTER" layoutX="368.0" layoutY="42.0" promptText="شماره کارت" />
+            <TextField fx:id="addfieldcost" alignment="CENTER" layoutX="214.0" layoutY="42.0" promptText="مبلغ" />
+            <Label layoutX="521.0" layoutY="73.0" text="به کارت :" />
+            <TextField fx:id="addfieldto" alignment="CENTER" layoutX="368.0" layoutY="71.0" promptText="شماره کارت" />
+            <Button fx:id="addbtn" layoutX="14.0" layoutY="96.0" mnemonicParsing="false" onAction="#btnadd" prefHeight="25.0" prefWidth="43.0" text="ثبت" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="14.0" layoutY="154.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="163.0" prefWidth="577.0">
+        <columns>
+            <TableColumn fx:id="columnid" prefWidth="40.0" text="ردیف" />
+          <TableColumn fx:id="columnfrom" prefWidth="200.0" text="از کارت" />
+          <TableColumn fx:id="columnto" prefWidth="200.0" text="به کارت" />
+            <TableColumn fx:id="columncost" prefWidth="136.0" text="مبلغ" />
+        </columns>
+      </TableView>
+      <Pane layoutX="14.0" layoutY="325.0" prefHeight="163.0" prefWidth="577.0" style="-fx-background-color: e8e8e8;">
+         <children>
+            <Label layoutX="453.0" layoutY="14.0" text="ویرایش کارت به کارت :" />
+            <Label layoutX="519.0" layoutY="75.0" text="از کارت :" />
+            <TextField fx:id="editfieldfrom" alignment="CENTER" layoutX="366.0" layoutY="72.0" promptText="شماره کارت" />
+            <TextField fx:id="editfieldcost" alignment="CENTER" layoutX="212.0" layoutY="72.0" promptText="مبلغ" />
+            <Label layoutX="519.0" layoutY="103.0" text="به کارت :" />
+            <TextField fx:id="editfieldto" alignment="CENTER" layoutX="366.0" layoutY="101.0" promptText="شماره کارت" />
+            <Label layoutX="519.0" layoutY="47.0" text="ردیف :" />
+            <TextField fx:id="editfieldid" alignment="CENTER" layoutX="366.0" layoutY="43.0" promptText="شماره ردیف در جدول" />
+            <Button fx:id="editbtndelete" layoutX="14.0" layoutY="126.0" mnemonicParsing="false" onAction="#btndel" prefHeight="25.0" prefWidth="43.0" text="حذف" />
+            <Button fx:id="editbtnsubmit" layoutX="63.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnedit" prefHeight="25.0" prefWidth="43.0" text="ثبت" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
